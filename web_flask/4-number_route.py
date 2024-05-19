@@ -26,9 +26,11 @@ def python(text='is cool'):
     formatted_text = text.replace("_", " ")
     return "Python " + formatted_text
 
+
 @app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
     return "{} is a number".format(n)
+
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True, host="0.0.0.0")
